@@ -1,1 +1,1 @@
-put "Reinhardt" + "Lin"
+puts "Reinhardt" + "Lin"
