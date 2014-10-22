@@ -1,4 +1,7 @@
 class MyCar
+	attr_accessor :color
+	attr_reader :year
+
 	def initialize(year, model, color)
 		@year = year
 		@model = model
@@ -24,9 +27,6 @@ class MyCar
 		@current_speed = 0
 		puts "You stop the car."
 	end
-
-	attr_accessor :color
-	attr_reader :year
 
 	def spray_paint(color)
 		self.color = color

@@ -1,4 +1,7 @@
 class MyCar
+	attr_accessor :color
+	attr_reader :year
+
 	def initialize(year, model, color)
 		@year = year
 		@model = model
@@ -25,9 +28,6 @@ class MyCar
 		puts "You stop the car."
 	end
 
-	attr_accessor :color
-	attr_reader :year
-
 	def spray_paint(color)
 		self.color = color
 		puts "You piant your car as the new color of #{color}!"
@@ -38,8 +38,8 @@ class MyCar
 	end
 
 	def to_s
-		"My car is a #{self.color}, #{self.year}, #{model}!"
-	end
+    	"My car is a #{self.color}, #{self.year}, #{@model}!"
+  	end
 end
 
 tercel = MyCar.new(2005, 'toyota tercel', 'silver')
@@ -62,5 +62,5 @@ tercel.spray_paint('white')
 
 MyCar.gas_mileage(1, 15)
 
-my_car = MyCar.new("2016", "Tesla Motor S", "Blue")
+my_car = MyCar.new("2015", "Tesla Motor S", "white")
 puts my_car
