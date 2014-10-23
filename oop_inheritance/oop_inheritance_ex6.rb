@@ -19,12 +19,21 @@ class Vehicle
     puts "#{kilometers / liters} kilometers per liter of gasoline"
   end
 
+  def age
+    "Your #{self.model} is #{years_old} years old."
+  end
+
+  private
+
+  def years_old
+    Time.now.year - self.year
+  end
 end
 
 class MyCar < Vehicle
   NUMBER_OF_TIRES = 4
   attr_accessor :color
-  attr_reader :year
+  attr_reader :year, :model
 
   def initialize(year, model, color)
     @year = year
@@ -63,16 +72,6 @@ class MyCar < Vehicle
 
   def to_s
       "My car is a #{self.color}, #{self.year}, #{@model}!"
-  end
-
-  def age
-    "Your #{self.model} is #{years_old} years old."
-  end
-
-  private
-
-  def years_old
-    Time.now.year - self.year
   end
 end
 
